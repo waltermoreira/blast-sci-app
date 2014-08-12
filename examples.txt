@@ -1,0 +1,19 @@
+Examples
+========
+
+Example proteins sequences and database are included in the directory
+`/examples`.
+
+The example sequences can be inspected with:
+
+    $ docker run -it blast-sci-app cat /examples/proteins.fasta
+
+A basic `blastp` search can be done with:
+
+    $ docker run -it -v $(pwd):/data blast-sci-app blastp \
+        -query /examples/proteins.fasta \
+        -db /examples/db/pdbaa \
+        -out proteins_blastp.txt
+
+The file `proteins_blastp.txt` in the current directory will contain
+the output of the search.

@@ -1,0 +1,7 @@
+Usage
+=====
+
+- To get usage of `blast`:
+
+        $ docker run -it blast-sci-app blastn -h
+        $ docker run -it blast-sci-app blastp -h
