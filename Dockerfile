@@ -14,8 +14,8 @@ ADD intro.txt /docs/blast/intro.txt
 ADD examples.tgz /
 
 WORKDIR /tmp
-ADD ncbi-blast-2.2.29+-1.x86_64.rpm /tmp/ncbi-blast-2.2.29+-1.x86_64.rpm
-RUN yum install -y ncbi-blast-2.2.29+-1.x86_64.rpm && \
+RUN curl -LO ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/2.2.29/ncbi-blast-2.2.29+-1.x86_64.rpm && \
+    yum install -y ncbi-blast-2.2.29+-1.x86_64.rpm && \
     rm ncbi-blast-2.2.29+-1.x86_64.rpm
 
 WORKDIR /data
